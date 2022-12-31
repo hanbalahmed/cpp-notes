@@ -1,0 +1,135 @@
+C++ NOTES:
+
+using namespace std;
+	means that we can use names for objects and variables from the standard library.
+
+
+#include <iostream>
+	is a header file library that lets us work with input and output objects, such as cout.
+Header files add functionality to C++ programs
+
+C++ ignores white space. But we use it to make the code more readable.
+
+return 0;
+	ends the main function.
+
+Note: Every C++ statement ends with a semicolon ;
+
+You might see some C++ programs that runs without the standard namespace library. 
+The using namespace std line can be omitted and replaced with the std keyword, 
+followed by the :: operator for some objects.
+
+The cout object, together with the << operator, is used to output values/print text:
+
+You can add as many cout objects as you want. 
+However, note that it does not insert a new line at the end of the output:
+
+To insert a new line, you can use the \n character:
+
+Two \n characters after each other will create a blank line:
+
+Another way to insert a new line, is with the endl manipulator:
+
+Both \n and endl are used to break lines. However, \n is most used.
+
+But what is \n exactly?
+The newline character (\n) is called an escape sequence, 
+and it forces the cursor to change its position to the beginning of the next line on the screen.
+This results in a new line.
+
+\t	Creates a horizontal tab	
+\\	Inserts a backslash character (\)	
+\"	Inserts a double quote character
+
+Comments can be used to explain C++ code, and to make it more readable.
+It can also be used to prevent execution when testing alternative code.
+Comments can be singled-lined or multi-lined.
+
+Single-line comments start with two forward slashes (//).
+Any text between // and the end of the line is ignored by the compiler (will not be executed).
+
+Multi-line comments start with /* and ends with */.
+Any text between /* and */ will be ignored by the compiler:
+
+In C++, there are different types of variables (defined with different keywords), for example:
+
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+double - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+string - stores text, such as "Hello World". String values are surrounded by double quotes
+bool - stores values with two states: true or false
+
+int myNum = 5;               // Integer (whole number without decimals)
+double myFloatNum = 5.99;    // Floating point number (with decimals)
+char myLetter = 'D';         // Character
+string myText = "Hello";     // String (text)
+bool myBoolean = true;       // Boolean (true or false)
+
+The general rules for naming variables are:
+
+Names can contain letters, digits and underscores
+Names must begin with a letter or an underscore (_)
+Names are case sensitive (myVar and myvar are different variables)
+Names cannot contain whitespaces or special characters like !, #, %, etc.
+Reserved words (like C++ keywords, such as int) cannot be used as names
+
+When you do not want others (or yourself) to change existing variable values, 
+use the const keyword (this will declare the variable as "constant", which means unchangeable and read-only):
+
+You should always declare the variable as constant when you have values that are unlikely to change
+
+You have already learned that cout is used to output (print) values. Now we will use cin to get user input.
+cin is a predefined variable that reads data from the keyboard with the extraction operator (>>).
+
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99;     // Floating point number
+double myDoubleNum = 9.98;   // Floating point number
+char myLetter = 'D';         // Character
+bool myBoolean = true;       // Boolean
+string myText = "Hello";     // String
+
+Use int when you need to store a whole number without decimals,
+like 35 or 1000, and float or double when you need a floating point number (with decimals), like 9.99 or 3.14515
+
+A floating point number can also be a scientific number with an "e" to indicate the power of 10:
+
+A boolean data type is declared with the bool keyword and can only take the values true or false.
+When the value is returned, true = 1 and false = 0.
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':
+
+The string type is used to store a sequence of characters (text).
+This is not a built-in type, but it behaves like one in its most basic usage.
+String values must be surrounded by double quotes
+To use strings, you must include an additional header file in the source code, the <string> library:
+ // Include the string library
+#include <string>
+
+// Create a string variable
+string greeting = "Hello";
+
+// Output string value
+cout << greeting;
+
+Although the + operator is often used to add together two values,it can also be used to add together a variable and a value,
+
+Operator	Name	Description				Example
++	Addition	Adds together two values		x + y	
+-	Subtraction	Subtracts one value from another	x - y	
+*	Multiplication	Multiplies two values			x * y	
+/	Division	Divides one value by another		x / y	
+%	Modulus		Returns the division remainder		x % y	
+++	Increment	Increases the value of a variable by 1	++x	
+--	Decrement	Decreases the value of a variable by 1	--x
+
+Operator	Example			Same As
+=		x = 5			x = 5	
++=		x += 3			x = x + 3	
+-=		x -= 3			x = x - 3	
+*=		x *= 3			x = x * 3	
+/=		x /= 3			x = x / 3	
+%=		x %= 3			x = x % 3	
+&=		x &= 3			x = x & 3	
+|=		x |= 3			x = x | 3	
+^=		x ^= 3			x = x ^ 3	
+>>=		x >>= 3			x = x >> 3	
+<<=		x <<= 3			x = x << 3
