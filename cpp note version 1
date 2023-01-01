@@ -137,3 +137,14 @@ Operator	Example			Same As
 cin - basically input() from python.
 can be used like this:
 cin >> var1 >> var2;
+
+A string in C++ is actually an object, 
+which contain functions that can perform certain operations on strings. For example, you can also concatenate strings with the append() function:
+
+append() example:
+string firstName = "John ";
+string lastName = "Doe";
+string fullName = firstName.append(lastName);
+cout << fullName;
+
+result: John Doe
