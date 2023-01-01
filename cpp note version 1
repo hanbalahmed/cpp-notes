@@ -133,3 +133,7 @@ Operator	Example			Same As
 ^=		x ^= 3			x = x ^ 3	
 >>=		x >>= 3			x = x >> 3	
 <<=		x <<= 3			x = x << 3
+
+cin - basically input() from python.
+can be used like this:
+cin >> var1 >> var2;
