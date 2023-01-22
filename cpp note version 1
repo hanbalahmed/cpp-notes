@@ -76,10 +76,27 @@ Reserved words (like C++ keywords, such as int) cannot be used as names
 When you do not want others (or yourself) to change existing variable values, 
 use the const keyword (this will declare the variable as "constant", which means unchangeable and read-only):
 
+C++ Conditions and If Statements
+You already know that C++ supports the usual logical conditions from mathematics:
+
+Less than: a < b
+Less than or equal to: a <= b
+Greater than: a > b
+Greater than or equal to: a >= b
+Equal to a == b
+Not Equal to: a != b
+You can use these conditions to perform different actions for different decisions.
+
 You should always declare the variable as constant when you have values that are unlikely to change
 
 You have already learned that cout is used to output (print) values. Now we will use cin to get user input.
 cin is a predefined variable that reads data from the keyboard with the extraction operator (>>).
+
+SIMPLIFIED EXPLANATION Of CIN:
+
+cin - basically input() from python.
+can be used like this:
+cin >> var1 >> var2;
 
 int myNum = 5;               // Integer (whole number)
 float myFloatNum = 5.99;     // Floating point number
@@ -134,9 +151,7 @@ Operator	Example			Same As
 >>=		x >>= 3			x = x >> 3	
 <<=		x <<= 3			x = x << 3
 
-cin - basically input() from python.
-can be used like this:
-cin >> var1 >> var2;
+
 
 A string in C++ is actually an object, 
 which contain functions that can perform certain operations on strings. For example, you can also concatenate strings with the append() function:
@@ -148,3 +163,31 @@ string fullName = firstName.append(lastName);
 cout << fullName;
 
 result: John Doe
+
+C++ has the following conditional statements:
+
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+The if Statement
+Use the if statement to specify a block of C++ code to be executed if a condition is true.
+
+Syntax
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+
+Also of u r doing something like:
+int x = 50;
+int y = 10;
+if (x > y) {
+  cout << "Hello World";
+}
+
+and u want to equal thingy then;
+int x = 50;
+int y = 10;
+if (x == y) {
+  cout << "Hello World";
+}
